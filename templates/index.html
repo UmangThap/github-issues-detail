@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<link rel="stylesheet" href="{% static 'css/main.css' %}">
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+		<script src="{% static 'js/main.js' %}"></script>
+	</head>
+	<body>
+		<div class="outer-div">
+			<h3 class="text-center">Show Issue Count</h3>
+			<div class="ui icon input loading">
+				<input type="text" class="repo-url" required placeholder="Search...">
+				<button id="submit-url" class="ui primary button ml-1">
+  				Go
+				</button>
+			</div>
+			<table class="ui celled table">
+				  <thead>
+					<tr><th>total no of issues</th>
+					<th>issues in the last 24 hours</th>
+					<th>issues between 24 hours and 7 days</th>
+					<th>issues before 7 days</th>
+				  </tr></thead>
+				  <tbody>
+					<tr>
+					<tr>
+					  <td id="total-issues"></td>
+					  <td id="day-issue"></td>
+					  <td id="seven-day-issue"></td>
+					  <td id="remaining-issue"></td>
+					</tr>
+				  </tbody>
+				</table>
+		</div>
+	</body>
+</html>
